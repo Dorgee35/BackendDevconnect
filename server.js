@@ -5,6 +5,9 @@ const app = express();
 // Connect to Database
 connectDB();
 
+// Init Middleware
+app.use(express.json({ extended: false }));
+
 // this is going to look for an enviornment variable called port to use if not found will use port 5000
 const PORT = process.env.PORT || 5000;
 
